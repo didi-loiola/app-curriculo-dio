@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet,View, Image, Text } from 'react-native';
+import { StyleSheet,View, Image, Text, SafeAreaView } from 'react-native';
 import image from './assets/photo.jpeg'
+import Icon from 'react-native-vector-icons/Feather'
 
 const App = () => {
   
@@ -11,10 +12,10 @@ const App = () => {
           <Image source={image} style={style.foto}/>
           <Text style={style.nome}>DIEGO LOIOLA</Text>
           <Text style={style.funcao}>Desenvolvedor Back-End</Text>
-          <View>
-            <Text>Github</Text>
-            <Text>LinkedIn</Text>
-            <Text>Instagram</Text>
+          <View style={style.redes_sociais}>
+            <Icon name="github" size={30}/>
+            <Icon name="instagram" size={30}/>
+            <Icon name="linkedin" size={30}/>
           </View>
         </View>
       </View>
@@ -28,9 +29,9 @@ const style = StyleSheet.create({
     flex: 1
   },
   container_cabecalho: {
-    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginTop: 10
   },
   foto: {
     width: 220,
@@ -46,6 +47,12 @@ const style = StyleSheet.create({
     fontSize: 22,
     color: '#939393',
     marginBottom: 10
+  },
+  redes_sociais:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '60%',
+    marginTop: 20
   }
 })
 
