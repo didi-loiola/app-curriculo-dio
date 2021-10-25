@@ -20,10 +20,6 @@ const style = StyleSheet.create({
       },
       card_header_text:{
         fontWeight: 'bold'
-      },
-      card_content_text: {
-        color: '#939393',
-        marginBottom: 10
       }
 })
 

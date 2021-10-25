@@ -41,7 +41,16 @@ const App = () => {
           </View>
         </View>
 
-        <Card />
+        <Card titulo="Formação Acadêmica">
+          <Text style={style.card_content_text}>UFPI</Text>
+          <Text style={style.card_content_text}>AESPI</Text>
+          <Text style={style.card_content_text}>SENAC</Text>
+        </Card>
+        <Card titulo="Experiência Profissional">
+          <Text style={style.card_content_text}>Craveiro</Text>
+          <Text style={style.card_content_text}>FEPISERH</Text>
+          <Text style={style.card_content_text}>Globo</Text>
+        </Card>
 
       </View>
     </>
@@ -79,6 +88,10 @@ const style = StyleSheet.create({
     width: '60%',
     marginTop: 15
   },
+  card_content_text: {
+    color: '#939393',
+    marginBottom: 10
+  }
   
 })
 
