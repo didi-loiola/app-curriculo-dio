@@ -1,7 +1,9 @@
 import React from 'react';
 import { StyleSheet,View, Image, Text, TouchableOpacity, Alert } from 'react-native';
+
 import image from './assets/photo.jpeg'
 import Icon from 'react-native-vector-icons/Feather'
+import Card from './components/Card'
 
 const App = () => {
 
@@ -39,31 +41,7 @@ const App = () => {
           </View>
         </View>
 
-        <View style={style.card_container}>
-          <View style={style.card}>
-            <View style={style.card_header}>
-              <Text style={style.card_header_text}>Experiência Profissional</Text>
-            </View>
-            <View style={style.card_content}>
-              <Text style={style.card_content_text}>NodeJs</Text>
-              <Text style={style.card_content_text}>Docker</Text>
-              <Text style={style.card_content_text}>ReactJS</Text>
-            </View>
-          </View>
-        </View>
-
-        <View style={style.card_container}>
-          <View style={style.card}>
-            <View style={style.card_header}>
-              <Text style={style.card_header_text}>Formação Acadêmica</Text>
-            </View>
-            <View style={style.card_content}>
-              <Text style={style.card_content_text}>UFPI</Text>
-              <Text style={style.card_content_text}>AESPI</Text>
-              <Text style={style.card_content_text}>Patronato</Text>
-            </View>
-          </View>
-        </View>
+        <Card />
 
       </View>
     </>
@@ -101,30 +79,7 @@ const style = StyleSheet.create({
     width: '60%',
     marginTop: 15
   },
-  card_container: {
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 15
-  },
-  card:{
-    width: '60%',
-    borderRadius:5,
-    borderWidth: 2,
-    borderColor: "#939393",
-    padding: 8,
-    backgroundColor: '#fff'
-  },
-  card_content: {
-    marginTop: 10,
-  },
-  card_header_text:{
-    fontWeight: 'bold'
-  },
-  card_content_text: {
-    color: '#939393',
-    marginBottom: 10
-  }
+  
 })
 
 export default App;
